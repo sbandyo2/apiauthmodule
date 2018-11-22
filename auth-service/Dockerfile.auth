@@ -1,0 +1,8 @@
+FROM anapsix/alpine-java:latest
+MAINTAINER ibm.com
+RUN apk --no-cache add netcat-openbsd
+COPY auth-service.jar .
+COPY auth-entrypoint.sh .
+RUN chmod +x auth-entrypoint.sh
+ENTRYPOINT ["sh","auth-entrypoint.sh"]
+EXPOSE 9101
