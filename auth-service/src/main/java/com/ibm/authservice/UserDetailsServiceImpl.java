@@ -30,7 +30,8 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
 				new AppUser(3, "csa", encoder.encode("12345"), "CSAUSER"),
 				new AppUser(4, "dwaas", encoder.encode("12345"), "DWAASUSER"),
 				new AppUser(5, "deviceibm", encoder.encode("12345"), "DEVICEIBMUSER"),
-				new AppUser(6, "admin", encoder.encode("12345"), "ADMIN")
+				new AppUser(6, "backend", encoder.encode("12345"), "DBUSER"),
+				new AppUser(7, "admin", encoder.encode("12345"), "ADMIN")
 			);
 			
 
