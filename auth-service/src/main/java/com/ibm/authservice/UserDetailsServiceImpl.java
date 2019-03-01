@@ -25,13 +25,13 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
 			
 			// hard coding the users. All passwords must be encoded.
 			final List<AppUser> users = Arrays.asList(
-				new AppUser(1, "on", encoder.encode("12345"), "ONUSER"),
-				new AppUser(2, "yourproc", encoder.encode("12345"), "YPUSER"),
-				new AppUser(3, "csa", encoder.encode("12345"), "CSAUSER"),
-				new AppUser(4, "dwaas", encoder.encode("12345"), "DWAASUSER"),
-				new AppUser(5, "deviceibm", encoder.encode("12345"), "DEVICEIBMUSER"),
-				new AppUser(6, "backend", encoder.encode("12345"), "DBUSER"),
-				new AppUser(7, "admin", encoder.encode("12345"), "ADMIN")
+				new AppUser(1, "on", encoder.encode(AuthUtils.getCredentialConfig("on")), "ONUSER"),
+				new AppUser(2, "yourproc", encoder.encode(AuthUtils.getCredentialConfig("yourproc")), "YPUSER"),
+				new AppUser(3, "csa", encoder.encode(AuthUtils.getCredentialConfig("csa")), "CSAUSER"),
+				new AppUser(4, "dwaas", encoder.encode(AuthUtils.getCredentialConfig("dwaas")), "DWAASUSER"),
+				new AppUser(5, "deviceibm", encoder.encode(AuthUtils.getCredentialConfig("deviceibm")), "DEVICEIBMUSER"),
+				new AppUser(6, "backend", encoder.encode(AuthUtils.getCredentialConfig("backend")), "DBUSER"),
+				new AppUser(7, "admin", encoder.encode(AuthUtils.getCredentialConfig("admin")), "ADMIN")
 			);
 			
 
